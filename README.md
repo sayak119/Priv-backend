@@ -14,7 +14,7 @@ We divided the privacy policy into **10** parts or clusters. They are as follows
 9. Do not track
 10. Others
 
-This allows users to focus on certain topics in a proper manner. To further understand and capture the multidimensionality of the policies, we made use of **Named Entity Recognition" which was custom made for law and policies. We divided it into **4** parts -
+This allows users to focus on certain topics in a proper manner. To further understand and capture the multidimensionality of the policies, we made use of **Named Entity Recognition** which was custom made for law and policies. We divided it into **4** parts -
 1. Article
 2. Court
 3. Legality
@@ -41,3 +41,10 @@ Priv is divided into **2** parts-
 * After this, run `flask run -h localhost -p 5000`.
 
 Our OS was Ubuntu 18.04 and Python version was 3.6.10
+
+The extension can be found [**here**](https://github.com/sayak119/Priv-chrome-extension)
+
+## How we built it
+First of all, our backend was built using Pytorch. The important sentences are identified using **TextRank** summarization. We made use of Summa for this. For flexibility, in the Chrome Extension, we have given the user an option to control the granularity of the sumaary. We made use of Pytorch text classification with 1 embedding layer. Using a API, we communicate the backend results to the chrome extension. The creation of pipeline was one of the most important task. We had to fine tune our model to understand terms based on policies and train them accordingly.
+
+Readability and complexity scores of the document are calculated and assigned using textstat library which uses the Flesch–Kincaid Grading method.
