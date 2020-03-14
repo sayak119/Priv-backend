@@ -29,7 +29,7 @@ It also provides users with Readability metrics, word count and Smog index. Smog
 Priv is divided into **2** parts-
 
 ### Backend
-* Install [Pytorch](https://pytorch.org/)and select how you want to install it.
+* Install [Pytorch](https://pytorch.org/) and select how you want to install it.
 * `pip install summa`
 * `pip install textstat`
 * `pip install torchtext` or `pip install torchtext --upgrade`
@@ -48,3 +48,5 @@ The extension can be found [**here**](https://github.com/sayak119/Priv-chrome-ex
 First of all, our backend was built using Pytorch. The important sentences are identified using **TextRank** summarization. We made use of Summa for this. For flexibility, in the Chrome Extension, we have given the user an option to control the granularity of the sumaary. We made use of Pytorch text classification with 1 embedding layer. Using a API, we communicate the backend results to the chrome extension. The creation of pipeline was one of the most important task. We had to fine tune our model to understand terms based on policies and train them accordingly.
 
 Readability and complexity scores of the document are calculated and assigned using textstat library which uses the Flesch–Kincaid Grading method.
+
+[**Video**](https://www.youtube.com/watch?v=-suRZULyLcM)
